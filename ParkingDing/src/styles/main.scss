@@ -1,0 +1,56 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+#parkingSection
+{
+  width: 960px;
+  @include centered;
+
+  >ul
+  {
+    list-style-type: none;
+  }
+}
+
+.parking
+{
+  display: inline-block;
+  width: $parkingDimensions;
+  height: $parkingDimensions;
+  background-color: $defaultParkingBackgroundColor;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px; //default size is 16px
+
+  &:hover
+  {
+    background-color: darken($defaultParkingBackgroundColor, 10%);
+  }
+
+  > .parking-sign
+  {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.parking-full
+{
+  background-color: $fullParkingBackgroundColor;
+
+  &:hover
+  {
+    background-color: darken($fullParkingBackgroundColor, 10%);
+  }
+}
+
+.parking-warning
+{
+  background-color: $warningParkingBackgroundColor;
+
+  &:hover
+  {
+    background-color: darken($warningParkingBackgroundColor, 10%);
+  }
+}

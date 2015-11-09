@@ -1,0 +1,4 @@
+@mixin centered($topandbottom: 0)
+{
+  margin: $topandbottom auto;
+}
